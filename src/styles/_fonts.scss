@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Galien';
+  src: local('Galien Bold'), local('Galien-Bold'),
+      url('../assets/fonts/galien/Galien-Bold.ttf') format('truetype'),
+      url('../assets/fonts/galien/Galien-Bold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroy/Gilroy-SemiBold.eot');
+  src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+      url('../assets/fonts/gilroy/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/gilroy/Gilroy-SemiBold.woff') format('woff'),
+      url('../assets/fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroy/Gilroy-Light.eot');
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+      url('../assets/fonts/gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/gilroy/Gilroy-Light.woff') format('woff'),
+      url('../assets/fonts/gilroy/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroy/Gilroy-Regular.eot');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+      url('../assets/fonts/gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/gilroy/Gilroy-Regular.woff') format('woff'),
+      url('../assets/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroy/Gilroy-Medium.eot');
+  src: local('Gilroy Medium'), local('Gilroy-Medium'),
+      url('../assets/fonts/gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/gilroy/Gilroy-Medium.woff') format('woff'),
+      url('../assets/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
