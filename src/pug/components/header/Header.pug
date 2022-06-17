@@ -1,0 +1,31 @@
+-
+  const navItems = [
+    {
+      id: 'about',
+      title: 'About US',
+      submenu: [
+          { about:'About' },
+          { do: 'What We Do' },
+          { project: 'Project' },
+          { how: 'How it Work With Us' },
+        ],
+    },
+    {
+      id: 'follow',
+      title: 'Follow US',
+      submenu: [
+        { inst:'Instagram' },
+        { fb: 'Facebook' },
+        { ln: 'LinkedIn' },
+        { youtube: 'Youtube' }
+      ],
+    },
+  ];
+
+mixin Header
+    header.header#header
+      .header__wrap
+        .header__logo#logo
+            +image('logo')
+        +MenuBtn
+        +Navigation
