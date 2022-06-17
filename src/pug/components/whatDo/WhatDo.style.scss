@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+
+.what {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 19.2rem 0;
+    gap: 10rem;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 15.8rem;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  &__title {
+    max-width: 35.8rem;
+    width: 100%;
+
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    letter-spacing: 0.05rem;
+    color: $blue-color-light;
+  }
+}
+
+@media (max-width: 992px) {
+  .what {
+    &__wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 8.2rem 0;
+    }
+
+    &__title {
+      max-width: unset;
+      text-align: center;
+      font-size: 3rem;
+      line-height: 3.6rem;
+    }
+
+    &__left {
+      align-items: center;
+      gap: 3.8rem;
+    }
+
+    &__right {
+      align-items: center;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .what {
+    &__wrap {
+      padding: 4.2rem 0;
+    }
+
+    &__right {
+      gap: 7rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+  }
+}
