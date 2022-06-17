@@ -1,0 +1,99 @@
+@import '../../../styles/variables';
+
+.promo {
+  background: linear-gradient(0deg, $blue-color-light-x7 8.84%, rgba(152, 195, 232, 0) 31.12%);
+
+  &__wrap {
+    background-image: url('../assets/img/promo.png');
+    background-repeat: no-repeat;
+    background-size: 50rem;
+    background-position: 100% 38%;
+  }
+
+  &__content {
+    max-width: 51rem;
+    padding: 10rem 0 19rem;
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+    width: 100%;
+
+    font-family: 'Galien';
+    font-size: 6.4rem;
+    line-height: 7.4rem;
+    letter-spacing: 0.04rem;
+    color: $blue-color;
+  }
+
+  &__text {
+    margin-bottom: 7.1rem;
+    max-width: 425px;
+
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+
+    letter-spacing: 0.05rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .promo {
+    &__wrap {
+      background-size: 29rem;
+      background-position: 100% 62%;
+    }
+
+    &__content {
+      padding: 4rem 0 6rem;
+    }
+
+    &__title {
+      margin-bottom: 1.2rem;
+
+      font-size: 3.5rem;
+      line-height: 5.4rem;
+    }
+
+    &__text {
+      margin-bottom: 4.1rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .promo {
+    &__wrap {
+      background-position: 50% 96%;
+      background-size: 30rem;
+    }
+
+    &__content {
+      max-width: unset;
+      padding: 2rem 0 28rem;
+
+      text-align: center;
+
+      background-position: 50% 96%;
+      background-size: 30rem;
+    }
+
+    &__text {
+      max-width: unset;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .promo {
+    &__title {
+      font-size: 3rem;
+      line-height: 2.4rem;
+    }
+
+    &__text {
+      margin-bottom: 3rem;
+    }
+  }
+}
