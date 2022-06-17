@@ -1,0 +1,14 @@
+mixin Navigation
+  nav.header__menu.nav#nav
+        ul.nav__list.reset-list
+          each item in navItems
+            li.nav__item
+              button.nav__btn(class=`nav__btn--${item.id}` id=item.id)= item.title
+              .nav__submenu(id=`${item.id}Submenu`)
+                each subMenuItem in item.submenu
+                  each title, pathName in subMenuItem
+                    a.nav__link(
+                      href= `#${pathName}`
+                      class= pathName
+                      id= 'navLink'
+                    )= title

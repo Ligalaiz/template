@@ -1,0 +1,9 @@
+mixin WhatCard(card)
+  .whatCard(class= `whatCard__${card.class}`)
+    .whatCard__img-wrap
+      +image(card.class,`whatCard__${card.class}-img`)
+    p.whatCard__title= card.title
+    p.whatCard__text= card.text
+    a.whatCard__link Learn more
+
+

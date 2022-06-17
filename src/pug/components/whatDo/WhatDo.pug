@@ -1,0 +1,29 @@
+-
+  const cards = [
+    {
+      title: 'Bring Technology To Your Comfrotable Home',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      class: 'tech'
+    },
+    {
+      title: 'Make Your business To Be Better Famous In Internet',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      class: 'business'
+    },
+    {
+      title: 'Build Your Digital Product That Suitable For Your Need',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      class: 'product'
+    },
+  ]
+
+mixin WhatDo
+  section.what
+    .container
+      .what__wrap
+        .what__left
+          p.what__title What we do to help our client grow in digital era,
+          +WhatCard(cards[1])
+        .what__right
+          +WhatCard(cards[0])
+          +WhatCard(cards[2])

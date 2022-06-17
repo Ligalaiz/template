@@ -1,0 +1,16 @@
+-
+  const logosTop = [ 'LOGO CLIENT', 'LOGO CLIENT', 'LOGO CLIENT', 'LOGO CLIENT',  ];
+  const logosBottom = [ 'LOGO CLIENT', 'LOGO CLIENT', 'LOGO CLIENT', 'MORE CLIENT' ];
+
+mixin Client
+   section.client
+    .client__wrap
+      .container
+          .client__head
+            p.client__title Our Beloved Client
+            p.client__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          .client__logos.logos
+            each logo in logosTop
+              .logos__item.logos__item--top= logo
+            each logo in logosBottom
+              .logos__item.logos__item--bottom= logo
