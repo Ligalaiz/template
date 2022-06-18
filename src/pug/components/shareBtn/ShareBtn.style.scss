@@ -1,0 +1,18 @@
+@import '../../../styles/variables';
+
+.shareBtn {
+  border: none;
+  width: 2.4rem;
+  height: 2.4rem;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  &__mark {
+    background-image: url('../assets/img/mark.svg');
+  }
+
+  &__share {
+    background-image: url('../assets/img/share.svg');
+  }
+}
