@@ -1,0 +1,14 @@
+mixin Article(article)
+  .result__article.article(class= `article--${article.type}`)
+    .article__text(class= `article__text--${article.type}`)
+      p.article__title(class= `article__title--${article.type}`)= article.title
+      p.article__subtitle(class= `article__subtitle--${article.type}`)= article.subtitle
+      .article__desc(class= `article__desc--${article.type}`)
+        .article__data
+          p.article__author= article.author
+          p.article__date= article.date
+        .article__share
+          +ShareBtn('mark')
+          +ShareBtn('share')
+    .article__img(class= `article__img--${article.type}`)
+      +image(article.img, article.img, 'jpg')
