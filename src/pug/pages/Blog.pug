@@ -1,0 +1,10 @@
+include ./_layout
+title= Blog
+body
+  p= buildTime + commitHash + version
+  +Header
+  main.main
+    +Title
+    +Search
+    +Articles
+    +Footer
