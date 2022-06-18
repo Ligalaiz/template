@@ -49,21 +49,15 @@ p {
 
 .container {
   width: 100%;
-  max-width: 784px;
+  max-width: 970px;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 992px) {
   .container {
     max-width: 720px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 540px;
   }
 }
 

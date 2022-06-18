@@ -1,0 +1,97 @@
+@import '../../../styles/variables';
+
+.whatCard {
+  max-width: 380px;
+  padding: 4.8rem;
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 1rem;
+
+  &__title {
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
+    color: $blue-color;
+  }
+
+  &__text {
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.05rem;
+    color: $blue-color;
+    opacity: 0.6;
+  }
+
+  &__link {
+    position: relative;
+
+    display: block;
+    max-width: 127px;
+    padding-right: 20px;
+
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
+    color: $blue-color-light-x4;
+
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url('../assets/img/arrow.svg');
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__business {
+    margin-left: 8rem;
+  }
+
+  &__img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5.6rem;
+  }
+
+  &__tech &__img-wrap {
+    position: relative;
+    top: -76px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .whatCard {
+    &__business {
+      margin-left: unset;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .whatCard {
+    max-width: 350px;
+    padding: 3rem;
+
+    &__business {
+      margin-left: unset;
+    }
+
+    &__img-wrap {
+      margin-bottom: 3.6rem;
+    }
+
+    &__tech &__img-wrap {
+      top: -61px;
+    }
+  }
+}

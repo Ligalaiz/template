@@ -1,2 +1,12 @@
 @use "fonts";
 @use "global";
+@use "../pug/components/header/Header.style";
+@use "../pug/components/promo/Promo.style";
+@use "../pug/components/commonBtn/CommonBtn.style";
+@use "../pug/components/menuBtn/MenuBtn.style";
+@use "../pug/components/navigation/Navigation.style";
+@use "../pug/components/whatDo/WhatDo.style";
+@use "../pug/components/whatCard/WhatCard.style";
+@use "../pug/components/project/Project.style";
+@use "../pug/components/client/Client.style";
+@use "../pug/components/footer/Footer.style";
