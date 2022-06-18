@@ -1,0 +1,83 @@
+@import '../../../styles/variables';
+
+.title {
+  margin-bottom: 5.6rem;
+
+  &__bg {
+    max-width: 133.6rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+
+    background-image: url('../assets/img/title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    color: $white-color;
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+
+    font-size: 4.4rem;
+    line-height: 7.4rem;
+    text-align: center;
+    letter-spacing: 0.04rem;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    letter-spacing: 0.04rem;
+    color: $white-color-light-X2;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    &__title {
+      margin-bottom: 1.5rem;
+
+      font-size: 3.6rem;
+      line-height: 4rem;
+    }
+
+    &__subtitle {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    &__title {
+      margin-bottom: 1rem;
+
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    &__subtitle {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    margin-bottom: 4rem;
+
+    &__bg {
+      padding: 4rem 0;
+    }
+  }
+}
