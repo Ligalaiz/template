@@ -1,0 +1,54 @@
+-
+  const articlesAll = [
+    {
+      type: 'row',
+      title: 'Massa eu in laoreet enim augue vulputate nunc.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'massa',
+    },
+    {
+      type: 'row',
+      title: 'Feugiat a euismod arcu feugiat posuere morbi.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'arcu',
+    },
+    {
+      type: 'row',
+      title: 'Sociis purus pellentesque faucibus vitae et felis.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'sociis',
+    },
+    {
+      type: 'row',
+      title: 'Cursus feugiat mi pellentesque mauris sed eu.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'cursus',
+    },
+    {
+      type: 'row',
+      title: 'A morbi arcu curabitur etiam fringilla augue.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'amet',
+    },
+  ]
+
+mixin Articles
+  section.articles
+    .container
+      h2.articles__title
+      .articles__wrap
+        each article in articlesAll
+          +Article(article)
+      .articles__nav
+        button.articles__btn.articles__btn--new New Post
+        button.articles__btn.articles__btn--old Old Post
