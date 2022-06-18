@@ -1,0 +1,49 @@
+-
+  const articlesSearch = [
+    {
+      type: 'lg',
+      title: 'Feugiat sodales at nullam tellus.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi posuere nibh tempor fringilla porta pellentesque ipsum.',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'feugiat',
+    },
+    {
+      type: 'norm',
+      title: 'Porta proin tellus sed pulvinar odio eu pulvinar.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'porta',
+    },
+    {
+      type: 'norm',
+      title: 'Non quam tortor, proin eu egestas scelerisque purus.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'non',
+    },
+    {
+      type: 'norm',
+      title: 'Amet amet sed pharetra risus sit eget interdum.',
+      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+      author: 'Samatha Leuthex',
+      date: 'May 5, 3 min read',
+      img: 'amet',
+    },
+  ]
+
+mixin Search
+  section.search
+    .container
+      .search__wrap
+        .search__line
+          input(type="text" class= 'search__field')
+        .search__result.result
+          h2.result__title Popular
+          .result__articles
+            each article in articlesSearch
+              +Article(article)
+          .result__all
+            a.result__link(href= '#') See All Popular Article
