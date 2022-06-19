@@ -9,14 +9,16 @@
 
     color: $white-color;
 
-    background-color: $blue-color-light-x4;
+    &--main {
+      background-color: $blue-color-light-x4;
+    }
   }
 
   &__bg {
     position: relative;
 
     border-top-right-radius: 20rem;
-    padding: 9.1rem 0 6.4rem;
+    padding: 9.1rem 0 10rem;
 
     background-color: $blue-color-light;
 
@@ -37,28 +39,29 @@
 
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  gap: 10rem;
+  gap: 18.8rem;
 
   &__left {
     width: 100%;
-    max-width: 46rem;
+    max-width: 50rem;
+    padding-left: 4.8rem;
   }
 
   &__title {
-    max-width: 31.7rem;
+    max-width: 31.9rem;
     margin-bottom: 3.2rem;
 
     font-size: 3.6rem;
     line-height: 4.6rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.18rem;
   }
 
   &__text {
     font-size: 1.6rem;
     line-height: 2.6rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.08rem;
     color: $white-color-light;
   }
 }
@@ -69,31 +72,34 @@
   &__content {
     display: flex;
     justify-content: flex-start;
-    gap: 10rem;
+    gap: 14rem;
+    margin-bottom: 0.5rem;
   }
 
   &__bg {
     margin-top: -1px;
-    padding: 9.1rem 0 6.4rem;
+    padding: 9.7rem 0 6.8rem;
 
     background-color: $blue-color-light;
   }
 
   &__left {
     width: 100%;
-    max-width: 29.9rem;
+    padding-left: 4.8rem;
+    max-width: 30.8rem;
   }
 
   &__logo {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 18.9rem;
     align-items: center;
-    margin-bottom: 4rem;
+    gap: 1.59rem;
+    margin-bottom: 3.2rem;
 
     font-size: 2.8rem;
     line-height: 4.6rem;
-    letter-spacing: 0.02rem;
+    letter-spacing: 0.1rem;
   }
 
   &__img {
@@ -105,35 +111,46 @@
     margin-bottom: 2.4rem;
     display: flex;
     justify-content: flex-start;
-    gap: 1.6rem;
+    gap: 2.1rem;
 
     font-size: 1.6rem;
     line-height: 2.6rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.08rem;
   }
 
   &__phone {
     display: flex;
     justify-content: flex-start;
-    gap: 1.6rem;
-    margin-bottom: 2.4rem;
+    gap: 2.3rem;
+    margin-bottom: 3.2rem;
+
+    letter-spacing: 0.17rem;
+    line-height: 1.6rem;
   }
 
   &__mail {
     display: flex;
     justify-content: flex-start;
-    gap: 1.6rem;
+    gap: 2.2rem;
     margin-bottom: 6.4rem;
+
+    letter-spacing: 0.17rem;
   }
 
   &__rights {
+    padding-left: 3.4rem;
+
+    font-size: 1.6rem;
+    letter-spacing: 0.08rem;
     color: $white-color-light-X2;
   }
 
   &__right {
     display: flex;
-    justify-content: space-between;
-    gap: 7.7rem;
+    justify-content: flex-start;
+    gap: 8.4rem;
+    max-width: 34rem;
+    width: 100%;
   }
 
   &__about,
@@ -142,11 +159,11 @@
   }
 
   &__title {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3rem;
 
     font-size: 2rem;
     line-height: 3rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.1rem;
   }
 
   &__links {
@@ -161,6 +178,10 @@
       color: $white-color;
     }
   }
+}
+
+.btn__content {
+  margin-top: 0.4rem;
 }
 
 @media (max-width: 992px) {
