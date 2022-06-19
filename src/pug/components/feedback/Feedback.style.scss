@@ -1,0 +1,154 @@
+@import '../../../styles/variables';
+
+.feedback {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 8.8rem;
+    margin-bottom: 9.6rem;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 30rem;
+    padding-top: 31rem;
+
+    background-image: url('../assets/img/form.png');
+    background-repeat: no-repeat;
+    background-position: 0 5.7rem;
+  }
+}
+
+.address__title,
+.phone__title,
+.service__title,
+.form__title {
+  margin-bottom: 2.4rem;
+
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.04rem;
+}
+
+.address__text,
+.phone__item,
+.service__site,
+.service__mail,
+.form__label {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.04rem;
+  color: $black-color-light;
+}
+
+.phone__item,
+.service__site,
+.service__mail {
+  position: relative;
+
+  padding-left: 3.3rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 1.6rem;
+    height: 1.6rem;
+
+    background-image: url('../assets/img/phone.svg');
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+
+    transform: translateY(-50%);
+  }
+}
+
+.service__site,
+.service__mail {
+  padding-left: 4rem;
+}
+
+.service__site:before,
+.service__mail:before {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  background-size: 2.4rem;
+}
+
+.service__mail:before {
+  height: 1.8rem;
+}
+
+.service__site:before {
+  background-image: url('../assets/img/world.svg');
+}
+
+.service__mail:before {
+  background-image: url('../assets/img/mail.svg');
+}
+
+.phone__item,
+.service__site {
+  margin-bottom: 1.6rem;
+}
+
+.form {
+  max-width: 54rem;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5.6rem;
+  border-radius: 1rem;
+
+  box-shadow: 0.5rem 1rem 5rem rgba(16, 112, 177, 0.2);
+
+  &__title {
+    margin-bottom: 4.8rem;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    color: $blue-color-light-x13;
+  }
+
+  &__field {
+    padding: 2.1rem 2.6rem;
+    border: 0.1rem solid $blue-color-light-x12;
+    border-radius: 1rem;
+
+    &:placeholder {
+      color: $blue-color-light-x9;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7.2rem;
+    gap: 3.2rem;
+  }
+}
+
+.btn {
+  &__form {
+    width: 100%;
+
+    filter: drop-shadow(0.5rem 1rem 2rem rgba(16, 112, 177, 0.2));
+  }
+}
+
+@media (max-width: 992px) {
+  .feedback {
+    &__wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
