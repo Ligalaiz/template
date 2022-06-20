@@ -17,3 +17,7 @@
 @use "../pug/components/articles/Articles.style";
 @use "../pug/components/feedback/Feedback.style";
 @use "../pug/components/map/Map.style";
+
+@use "../pug/pages/main/Main.style.scss";
+@use "../pug/pages/blog/Blog.style.scss";
+@use "../pug/pages/contact/Contact.style.scss";

@@ -1,12 +1,12 @@
 @import '../../../styles/variables';
 
 .title {
-  margin-bottom: 5.6rem;
+  margin-bottom: 4rem;
 
   &__bg {
-    max-width: 133.6rem;
+    max-width: 136.7rem;
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: 5rem 0 5.1rem;
 
     background-image: url('../assets/img/title.png');
     background-repeat: no-repeat;
@@ -23,19 +23,22 @@
   }
 
   &__title {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
+    padding-left: 3px;
 
     font-size: 4.4rem;
-    line-height: 7.4rem;
+    line-height: 6.9rem;
     text-align: center;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.22rem;
   }
 
   &__subtitle {
+    max-width: 73rem;
+
     font-size: 2rem;
     line-height: 3rem;
     text-align: center;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.08rem;
     color: $white-color-light-X2;
   }
 }
