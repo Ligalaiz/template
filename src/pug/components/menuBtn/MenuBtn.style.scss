@@ -4,10 +4,12 @@
   position: relative;
 
   display: flex;
-  width: 50px;
+  align-items: center;
+  width: 35px;
+  height: 40px;
   border: none;
-  height: 50px;
   padding: 0;
+  padding-bottom: 0.6rem;
 
   background-color: transparent;
   cursor: pointer;
@@ -37,36 +39,36 @@
 
 .line1 {
   stroke-dasharray: 60 207;
-  stroke-width: 6;
+  stroke-width: 8;
 }
 
 .line2 {
   stroke-dasharray: 60 60;
-  stroke-width: 6;
+  stroke-width: 8;
 }
 
 .line3 {
   stroke-dasharray: 60 207;
-  stroke-width: 6;
+  stroke-width: 8;
 }
 
 .opened .line1 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
-  stroke-width: 6;
+  stroke-width: 8;
    stroke: $white-color;
 }
 
 .opened .line2 {
   stroke-dasharray: 1 60;
   stroke-dashoffset: -30;
-  stroke-width: 6;
+  stroke-width: 8;
    stroke: $white-color;
 }
 
 .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
-  stroke-width: 6;
+  stroke-width: 8;
    stroke: $white-color;
 }

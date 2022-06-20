@@ -1,19 +1,13 @@
 @import '../../../styles/variables';
 
-.footer {
-  &__wrap {
-    background-color: unset;
-  }
-}
-
 .articles {
-  padding-bottom: 9.6rem;
+  padding: 5rem 0 8.7rem;
 
   &__wrap {
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
-    margin-bottom: 5.6rem;
+    gap: 2.6rem;
+    margin-bottom: 4rem;
   }
 
   &__title {
@@ -36,12 +30,13 @@
 
     display: block;
     max-width: 127px;
+    padding: 5px;
 
     border: none;
     background-color: transparent;
 
     line-height: 3rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.16rem;
     color: $blue-color-light-x4;
 
     cursor: pointer;
@@ -51,8 +46,8 @@
       position: absolute;
       top: 50%;
 
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
 
       background-image: url('../assets/img/arrow.svg');
       background-repeat: no-repeat;
@@ -68,7 +63,8 @@
     }
 
     &--new {
-      padding-left: 3.2rem;
+      padding-left: 3.4rem;
+
       &:before {
         left: 0;
         transform: translateY(-50%) rotate(180deg);
