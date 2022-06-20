@@ -25,8 +25,8 @@
 
   &__menu {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -8.2rem;
+    top: -4.1rem;
   }
 
   &__logo {
@@ -51,13 +51,13 @@
 }
 
 @media (max-width: 992px) {
-  .main {
+  .main--main {
     margin-top: 7.4rem;
   }
 }
 
 @media (max-width: 576px) {
-  .main {
+  .main--main{
     margin-top: 6rem;
   }
 }

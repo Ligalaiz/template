@@ -7,6 +7,7 @@ const follow = document.getElementById('follow');
 const about = document.getElementById('about');
 const nav = document.getElementById('nav');
 const header = document.getElementById('header');
+const form = document.getElementById('form');
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 200) {
@@ -73,4 +74,10 @@ const handleClick = (e) => {
   }
 };
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+  form.reset();
+};
+
+form.addEventListener('submit', handleSubmit);
 document.addEventListener('click', handleClick);

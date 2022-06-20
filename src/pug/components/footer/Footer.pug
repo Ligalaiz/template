@@ -1,6 +1,6 @@
-mixin Footer
+mixin Footer(page)
   footer.footer
-    .footer__wrap.footer__wrap--main
+    .footer__wrap(class= `footer__wrap--${page}`)
       .footer__bg
         .container
           .footer__content.content
@@ -10,7 +10,7 @@ mixin Footer
             .content__right
               +CommonBtn('Let’s Talk', 'content')
       .footer__contacts.contacts
-        .contacts__bg
+        .contacts__bg.contacts__bg--blog
           .container
             .contacts__content
               .contacts__left
@@ -23,10 +23,10 @@ mixin Footer
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 .contacts__phone
                   p T.
-                  p +62-812-7313-4321
+                  a(href="tel:6281273134321") +62-812-7313-4321
                 .contacts__mail
                   p E.
-                  p hello.afrian@gmail.com
+                  a(href= "mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
               .contacts__right
                 .contacts__about
                   .contacts__title

@@ -8,24 +8,24 @@ mixin Feedback
             p.address__text Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.
           .feeback__phone.phone
             p.phone__title PHONE
-            p.phone__item +62-812-7313-4321
-            p.phone__item +62-817-000-1234
+            a.phone__item(href="tel:6281273134321") +62-812-7313-4321
+            a.phone__item(href="tel:628170001234") +62-817-000-1234
           .feeback__service.service
             p.service__title ONLINE SERVICE
-            p.service__site www.afrianska.com
-            p.service__mail hello.afrian@gmail.com
+            a.service__site(href= '#') www.afrianska.com
+            a.service__mail(href= "mailto:hello.afrian@gmail.com") hello.afrian@gmail.com
         .feedback__form.form
-          form
+          form#form
             p.form__title SEND US MESSAGE
             .form__wrap
               label.form__label.form__label--name
                 span Full Name
-                input.form__field.form__field--name(type="text")
+                input.form__field.form__field--name(type="text" placeholder= "Your Name" autofocus required)
               label.form__label.form__label--email
                 span Email
-                input.form__field.form__field--email(type="text")
+                input.form__field.form__field--email(type="email" placeholder= "Your Email" pattern="[^ @]*@[^ @]*" required)
               label.form__label.form__label--email
                 span Message
-                textarea.form__field.form__field--area(name="", cols="30", rows="10")
+                textarea.form__field.form__field--area(name="", cols="30", rows="3" placeholder= "Your Message")
             +CommonBtn('SUBMIT', 'form', 'submit')
 

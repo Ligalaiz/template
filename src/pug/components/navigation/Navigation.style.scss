@@ -3,11 +3,12 @@
 .nav {
   display: none;
   min-width: 300px;
-  max-width: 310px;
-  height: 100vh;
-
+  max-width: 39.3rem;
+  width: 100%;
+  height: calc(100vh + 200px);
+  border-top-left-radius: 5rem;
   padding: 8.1rem 0 0;
-  border-top-left-radius: 3rem;
+
   background-color: $blue-color-light-x4;
 
   animation: showMenu 1s;
@@ -15,9 +16,9 @@
   &__list {
     display: flex;
     width: 100%;
-    padding: 20px;
+    padding: 1.3rem 0 1.7rem 5rem;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.9rem;
 
     overflow-y: scroll;
     z-index: 50;
@@ -27,11 +28,16 @@
     position: relative;
 
     border: none;
-    padding: 5px 20px 5px 0;
+    padding: 0.5rem 3.2rem 0.5rem 0;
+    margin-bottom: 1.4rem;
 
-    color: $white-color;
+    font-family: 'Gilroy';
     font-weight: 600;
+    font-size: 1.9rem;
     text-align: left;
+    color: $white-color;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
 
     background-color: transparent;
     cursor: pointer;
@@ -42,8 +48,8 @@
       top: 47%;
       right: 5px;
 
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
 
       border: 2px solid $white-color;
       border-left: none;
@@ -58,8 +64,8 @@
       top: 60%;
       right: 5px;
 
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
 
       border: 2px solid $white-color;
       border-right: none;
@@ -74,7 +80,7 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2.1rem;
 
     &.active {
       animation: showSubMenu 2s;
@@ -87,8 +93,14 @@
 
   &__link {
     color: $white-color;
+    letter-spacing: 0.2rem;
 
     cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: $blue-color;
+    }
   }
 
   &.active {

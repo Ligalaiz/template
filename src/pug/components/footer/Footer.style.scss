@@ -81,6 +81,10 @@
     padding: 9.7rem 0 6.8rem;
 
     background-color: $blue-color-light;
+
+    &--blog {
+      padding: 9.7rem 0 6.4rem;
+    }
   }
 
   &__left {
@@ -137,6 +141,20 @@
     letter-spacing: 0.17rem;
   }
 
+  &__phone a,
+  &__mail a {
+    font-size: 1.6rem;
+    letter-spacing: 0.17rem;
+    line-height: 1.6rem;
+    color: $white-color;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: $blue-color-light-x8;
+    }
+  }
+
   &__rights {
     padding-left: 3.4rem;
 
@@ -176,6 +194,12 @@
 
     & a {
       color: $white-color;
+
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: $blue-color-light-x8;
+      }
     }
   }
 }

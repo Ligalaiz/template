@@ -13,11 +13,11 @@
     flex-direction: column;
     gap: 4rem;
     max-width: 30rem;
-    padding-top: 31rem;
+    padding-top: 31.5rem;
 
     background-image: url('../assets/img/form.png');
     background-repeat: no-repeat;
-    background-position: 0 5.7rem;
+    background-position: 1.2rem 6.3rem;
   }
 }
 
@@ -29,7 +29,7 @@
 
   font-size: 2rem;
   line-height: 3rem;
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.1rem;
 }
 
 .address__text,
@@ -39,7 +39,7 @@
 .form__label {
   font-size: 1.6rem;
   line-height: 2.6rem;
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.08rem;
   color: $black-color-light;
 }
 
@@ -48,22 +48,30 @@
 .service__mail {
   position: relative;
 
-  padding-left: 3.3rem;
+  display: block;
+  padding-left: 4rem;
+
+  transition: all 0.2s linear;
+  cursor: pointer;
 
   &:before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 52%;
+    left: 3px;
 
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.8rem;
+    height: 1.8rem;
 
     background-image: url('../assets/img/phone.svg');
     background-repeat: no-repeat;
-    background-size: 1.6rem;
+    background-size: 1.8rem;
 
     transform: translateY(-50%);
+  }
+
+  &:hover {
+    color: $blue-color;
   }
 }
 
@@ -74,10 +82,13 @@
 
 .service__site:before,
 .service__mail:before {
-  width: 2.4rem;
-  height: 2.4rem;
+  left: 2px;
+  top: 59%;
 
-  background-size: 2.4rem;
+  width: 2.1rem;
+  height: 2.1rem;
+
+  background-size: 2rem;
 }
 
 .service__mail:before {
@@ -97,6 +108,10 @@
   margin-bottom: 1.6rem;
 }
 
+.phone__item:nth-child(3) {
+  margin-bottom: 0;
+}
+
 .form {
   max-width: 54rem;
   width: 100%;
@@ -113,18 +128,37 @@
   &__label {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1.1rem;
 
     color: $blue-color-light-x13;
   }
 
   &__field {
-    padding: 2.1rem 2.6rem;
+    padding: 2.1rem 2.7rem 2.1rem 3.9rem;
     border: 0.1rem solid $blue-color-light-x12;
     border-radius: 1rem;
 
-    &:placeholder {
+    font-family: 'Gilroy';
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.04rem;
+
+    transition: all 0.2s linear;
+
+    &::placeholder {
+      font-family: 'Gilroy';
+      font-size: 1.6rem;
+      line-height: 3rem;
+      letter-spacing: 0.04rem;
       color: $blue-color-light-x9;
+    }
+
+    &--area {
+      min-height: 14.5rem;
+    }
+
+    &:focus {
+      border-color: $blue-color;
     }
   }
 
@@ -132,13 +166,14 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 7.2rem;
-    gap: 3.2rem;
+    gap: 3.1rem;
   }
 }
 
 .btn {
   &__form {
     width: 100%;
+    height: 7.2rem;
 
     filter: drop-shadow(0.5rem 1rem 2rem rgba(16, 112, 177, 0.2));
   }
