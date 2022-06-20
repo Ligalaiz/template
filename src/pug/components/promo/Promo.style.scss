@@ -1,39 +1,41 @@
 @import '../../../styles/variables';
 
 .promo {
-  background: linear-gradient(0deg, $blue-color-light-x7 8.84%, rgba(152, 195, 232, 0) 31.12%);
+  background-image: url('../assets/img/promo.png');
+  background-repeat: no-repeat;
+  background-size: 69rem;
+  background-position: 76% 32%;
 
-  &__wrap {
-    background-image: url('../assets/img/promo.png');
-    background-repeat: no-repeat;
-    background-size: 50rem;
-    background-position: 100% 38%;
+  &__bg {
+    margin: 0 auto;
+    max-width: 136.6rem;
+    background: linear-gradient(0deg, $blue-color-light-x7 8.84%, rgba(152, 195, 232, 0) 31.12%);
   }
 
   &__content {
-    max-width: 51rem;
-    padding: 10rem 0 19rem;
+    max-width: 52rem;
+    padding: 8rem 0 19rem;
   }
 
   &__title {
-    margin-bottom: 3.2rem;
+    margin-bottom: 4.2rem;
     width: 100%;
 
     font-family: 'Galien';
     font-size: 6.4rem;
     line-height: 7.4rem;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.25rem;
     color: $blue-color;
   }
 
   &__text {
-    margin-bottom: 7.1rem;
+    margin-bottom: 7.6rem;
     max-width: 425px;
 
     font-size: 1.6rem;
     line-height: 2.6rem;
 
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.08rem;
   }
 }
 

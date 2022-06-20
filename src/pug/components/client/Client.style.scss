@@ -12,8 +12,9 @@
 
   &__head {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 11.1rem;
+    justify-content: flex-start;
+    gap: 9.3rem;
 
     color: $white-color;
   }
@@ -23,15 +24,15 @@
 
     font-size: 3.6rem;
     line-height: 4.6rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.2rem;
   }
 
   &__text {
-    max-width: 54rem;
+    max-width: 52rem;
 
     font-size: 1.6rem;
     line-height: 2.6rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.08rem;
     text-align: justify;
 
     opacity: 0.6;

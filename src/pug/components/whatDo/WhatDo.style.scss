@@ -4,7 +4,7 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    padding: 19.2rem 0;
+    padding: 19.2rem 0 14rem;
     gap: 10rem;
   }
 
@@ -20,12 +20,13 @@
   }
 
   &__title {
-    max-width: 35.8rem;
+    max-width: 36.3rem;
     width: 100%;
 
     font-size: 3.6rem;
+    font-weight: 500;
     line-height: 4.6rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.191rem;
     color: $blue-color-light;
   }
 }
