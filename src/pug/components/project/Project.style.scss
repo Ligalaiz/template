@@ -29,39 +29,6 @@
   }
 }
 
-.slider {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 100%;
-  min-height: 41.7rem;
-  padding: 4.8rem;
-  margin-bottom: 9.6rem;
-  border-radius: 1rem;
-
-  color: $white-color;
-
-  background-image: url('../assets/img/slider.png');
-
-  &__title {
-    margin-bottom: 0.7rem;
-
-    font-size: 2.8rem;
-    line-height: 4.6rem;
-    letter-spacing: 0.05em;
-  }
-
-  &__subtitle {
-    font-size: 1.6rem;
-    line-height: 4.6rem;
-    letter-spacing: 0.05em;
-    color: $white-color;
-
-    opacity: 0.8;
-  }
-}
-
 .collection {
   display: flex;
   gap: 9.6rem;
@@ -148,15 +115,6 @@
     }
   }
 
-  .slider {
-    padding: 3rem;
-
-    &__title {
-      font-size: 2.5rem;
-      line-height: 3.5rem;
-    }
-  }
-
   .collection {
     &__item {
       padding: 2.4rem;
@@ -173,10 +131,219 @@
   }
 }
 
+/* Slider */
+.slider {
+  position: relative;
+
+  min-height: 41.7rem;
+  margin-bottom: 9.6rem;
+
+  color: $white-color;
+
+  overflow: hidden;
+
+  &__title {
+    position: absolute;
+    top: 4.8rem;
+    right: 4.8rem;
+
+    margin-bottom: 0.7rem;
+
+    font-size: 2.8rem;
+    line-height: 4.6rem;
+    letter-spacing: 0.14rem;
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 10.1rem;
+    right: 4.8rem;
+
+    font-size: 1.6rem;
+    line-height: 4.6rem;
+    letter-spacing: 0.05rem;
+
+    opacity: 0.8;
+  }
+
+  & .container {
+    position: relative;
+    top: 49%;
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__slides {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 41.8rem;
+
+    animation: 1.4s linear;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 49%;
+    transform: translateY(-50%);
+
+    width: 1.6rem;
+    height: 2.7rem;
+    border: none;
+
+    background-image: url('../assets/img/slider/prev.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    background-image: url('../assets/img/slider/prev_hover.svg');
+  }
+
+  &__btn--next {
+    transform: translateY(-50%) rotate(180deg);
+    right: 0;
+  }
+
+  &__img {
+    width: 102rem;
+    height: 59.4rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &--first {
+      background-image: url('../assets/img/slider.png');
+    }
+
+    &--second {
+      background-image: url('../assets/img/slider.png');
+    }
+  }
+}
+
+.active,
+.next {
+  display: flex;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media (max-width: 930px) {
+  /* Slider */
+  .slider {
+    height: 45.1rem;
+
+    &__img {
+      background-size: 70rem;
+    }
+
+    &__btn--next {
+      right: 2.6rem;
+    }
+
+    &__btn--prev {
+      left: 2.6rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    &__title {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+  }
+}
+@media (max-width: 698px) {
+  /* Slider */
+  .slider {
+    height: 36rem;
+
+    &__img {
+      background-size: 61rem;
+    }
+  }
+}
+
+@media (max-width: 626px) {
+  /* Slider */
+  .slider {
+    height: 22.1rem;
+    border-width: 0.3rem;
+    &__img {
+      background-size: 38.3rem;
+      background-position: 50% 53%;
+    }
+
+    &__btn--prev {
+      left: 1rem;
+    }
+
+    &__btn--next {
+      right: 1rem;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .slider {
-    padding: 2rem;
-
     &__title {
       font-size: 2rem;
       line-height: 3rem;

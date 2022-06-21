@@ -1,3 +1,4 @@
+const fs = require('fs');
 const { join } = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -10,6 +11,9 @@ const commitHash = require('child_process').execSync('git rev-parse --short HEAD
 
 const root = join(__dirname, '../');
 const src = join(root, 'src');
+const pages = join(src, 'pug/pages');
+
+const PAGES = fs.readdirSync(pages).filter((fileName) => fileName.endsWith('.pug'));
 
 module.exports = merge(common, {
   mode: 'development',
@@ -20,6 +24,7 @@ module.exports = merge(common, {
     path: join(root, 'dist'),
     filename: '[name].[contenthash:10].js',
     chunkFilename: '[name].[contenthash:10].js',
+    sourceMapFilename: '[name].[contenthash:10].map',
     assetModuleFilename: 'assets/[name].[contenthash:10].[ext]',
     publicPath: '/',
   },
@@ -34,6 +39,7 @@ module.exports = merge(common, {
   },
 
   devServer: {
+    static: join(root, 'dist'),
     hot: true,
     open: '/',
     port: 3000,
@@ -43,16 +49,22 @@ module.exports = merge(common, {
   // plugins: [new BundleAnalyzerPlugin()],
 
   plugins: [
-    new HtmlWebpackPlugin({
-      template: join(src, 'index.pug'),
-      templateParameters: {
-        title: 'template',
-        buildTime: `Build at: ${new Date().toISOString()} `,
-        commitHash: `Commit hash: ${commitHash} `,
-        version: `App version: ${JSON.stringify(pkg.version)} `,
-      },
-      favicon: join(src, 'assets/img', 'favicon.png'),
-    }),
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: `${pages}/${page}`,
+          filename: `./${page.replace(/\.pug/, '.html')}`,
+          page: `${page.replace(/\.pug/, '.html')}`,
+          templateParameters: {
+            title: 'template',
+            buildTime: `Build at: ${new Date().toISOString()} `,
+            commitHash: `Commit hash: ${commitHash} `,
+            version: `App version: ${JSON.stringify(pkg.version)} `,
+          },
+          favicon: join(src, 'assets/img', 'favicon.png'),
+        }),
+    ),
+
     new SpriteLoaderPlugin(),
   ],
 

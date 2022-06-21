@@ -4,9 +4,22 @@ mixin Project
       .projectSec__head
         p.projectSec__title Our Finished Project
         p.projectSec__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-      .projectSec__slider.slider
-        p.slider__title Smart Home Installation
-        p.slider__subtitle In Muarakana Housing Estate
+    .container
+      .slider
+        h2.visually-hidden Slider
+        .slider__wrap
+          .slider__slides
+            .slider__item.slider__item--first.active
+              p.slider__title Smart Home Installation
+              p.slider__subtitle In Muarakana Housing Estate
+              .slider__img.slider__img--first
+            .slider__item.slider__item--second
+              p.slider__title Smart Home Installation
+              p.slider__subtitle In Muarakana Housing Estate
+              .slider__img.slider__img--second
+        button.slider__btn.slider__btn--prev(type= "button")
+        button.slider__btn.slider__btn--next(type="button")
+    .container
       .projectSec__collection.collection
         .collection__item.collection__item--app
           p.collection__title Sparklite App
