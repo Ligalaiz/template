@@ -1,7 +1,7 @@
+const fs = require('fs');
 const { join } = require('path');
 const { merge } = require('webpack-merge');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,6 +9,9 @@ const common = require('./webpack.common');
 
 const root = join(__dirname, '../');
 const src = join(root, 'src');
+const pages = join(src, 'pug/pages');
+
+const PAGES = fs.readdirSync(pages).filter((fileName) => fileName.endsWith('.pug'));
 
 module.exports = merge(common, {
   mode: 'production',
@@ -57,39 +60,23 @@ module.exports = merge(common, {
       fix: false,
       failOnError: true,
     }),
-    new HtmlWebpackPlugin({
-      template: join(src, 'index.pug'),
-      templateParameters: {
-        title: 'Project Management App',
-        buildTime: '',
-        commitHash: '',
-        version: '',
-      },
-      favicon: join(src, 'assets/img', 'favicon.png'),
-    }),
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: `${pages}/${page}`,
+          filename: `./${page.replace(/\.pug/, '.html')}`,
+          templateParameters: {
+            title: 'template',
+            buildTime: '',
+            commitHash: '',
+            version: '',
+          },
+          favicon: join(src, 'assets/img', 'favicon.png'),
+        }),
+    ),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash:10].css',
       chunkFilename: 'styles/[name].[contenthash:10].css',
-    }),
-    new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: [
-          ['gifsicle', { interlaced: true }],
-          ['jpegtran', { progressive: true }],
-          ['optipng', { optimizationLevel: 5 }],
-          [
-            'svgo',
-            {
-              plugins: [
-                {
-                  removeViewBox: false,
-                  removeDoctype: false,
-                },
-              ],
-            },
-          ],
-        ],
-      },
     }),
   ],
 });

@@ -1,4 +1,10 @@
-mixin Navigation
+-
+  const setLink = (val) => {
+    if (val === 'do') return 'contact';
+    if (val === 'about') return 'blog';
+  }
+
+mixin Navigation(navItems)
   nav.header__menu.nav#nav
         ul.nav__list.reset-list
           each item in navItems
@@ -8,7 +14,7 @@ mixin Navigation
                 each subMenuItem in item.submenu
                   each title, pathName in subMenuItem
                     a.nav__link(
-                      href= `#${pathName}`
+                      href= `${setLink(pathName)}.html`
                       class= pathName
                       id= 'navLink'
                     )= title

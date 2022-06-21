@@ -25,7 +25,8 @@
 mixin Header
     header.header#header
       .header__wrap
-        .header__logo#logo
-            +image('logo')
+        a(href="/")
+          .header__logo#logo
+              +image('logo')
         +MenuBtn
-        +Navigation
+        +Navigation(navItems)
