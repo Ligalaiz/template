@@ -2,7 +2,7 @@ const fs = require('fs');
 const { join } = require('path');
 const { merge } = require('webpack-merge');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./webpack.common');
@@ -29,29 +29,9 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/i,
-        use: ['css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
-  },
-
-  optimization: {
-    runtimeChunk: 'single',
-    minimizer: [`...`, new CssMinimizerPlugin()],
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-        styles: {
-          name: 'main',
-          type: 'css/mini-extract',
-          chunks: 'all',
-          enforce: true,
-        },
-      },
-    },
   },
 
   plugins: [
