@@ -29,12 +29,16 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
 
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].[contenthash:10].css',
+      chunkFilename: 'styles/[name].[contenthash:10].css',
+    }),
     new ESLintPlugin({
       extensions: ['js'],
       fix: false,
@@ -54,9 +58,5 @@ module.exports = merge(common, {
           favicon: join(src, 'assets/img', 'favicon.png'),
         }),
     ),
-    new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash:10].css',
-      chunkFilename: 'styles/[name].[contenthash:10].css',
-    }),
   ],
 });

@@ -3,6 +3,7 @@ const { join } = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const pkg = require('../package.json');
 const common = require('./webpack.common');
 
@@ -33,7 +34,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
@@ -49,6 +50,7 @@ module.exports = merge(common, {
   // plugins: [new BundleAnalyzerPlugin()],
 
   plugins: [
+    new MiniCssExtractPlugin(),
     ...PAGES.map(
       (page) =>
         new HtmlWebpackPlugin({
