@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
       }
     }
 
-    if (target.closest('#navLink')) {
+    if (target.closest('.navLink')) {
       followSubmenu.classList.add('close');
       followSubmenu.classList.remove('active');
       follow.classList.remove('active');

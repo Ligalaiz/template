@@ -14,7 +14,6 @@ mixin Navigation(navItems)
                 each subMenuItem in item.submenu
                   each title, pathName in subMenuItem
                     a.nav__link(
-                      href= `${setLink(pathName)}.html`
+                      href= `${pathName ? setLink(pathName) + '.html' : '#'}`
                       class= pathName
-                      id= 'navLink'
                     )= title

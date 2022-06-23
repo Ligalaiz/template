@@ -13,6 +13,12 @@ const pages = join(src, 'pug/pages');
 
 const PAGES = fs.readdirSync(pages).filter((fileName) => fileName.endsWith('.pug'));
 
+const getTitle = (val) => {
+  if (val.match(/index/g)) return 'New Automation Tool';
+  if (val.match(/blog/g)) return 'About Us';
+  if (val.match(/contact/g)) return 'Contact Us';
+};
+
 module.exports = merge(common, {
   mode: 'production',
   name: 'client',
@@ -50,7 +56,7 @@ module.exports = merge(common, {
           template: `${pages}/${page}`,
           filename: `./${page.replace(/\.pug/, '.html')}`,
           templateParameters: {
-            title: 'template',
+            title: `${getTitle(page)}`,
             buildTime: '',
             commitHash: '',
             version: '',

@@ -1,5 +1,6 @@
 mixin Feedback
   section.feedback
+    h2.visually-hidden= 'Contacts'
     .container
       .feedback__wrap
         .feedback__contacts
@@ -26,6 +27,6 @@ mixin Feedback
                 input.form__field.form__field--email#emailField(type="email" placeholder= "Your Email" pattern="[^ @]*@[^ @]*" required)
               label.form__label.form__label--email
                 span Message
-                textarea.form__field.form__field--area#descField(name="", cols="30", rows="3" placeholder= "Your Message")
+                textarea.form__field.form__field--area#descField(name="desc", cols="30", rows="3" placeholder= "Your Message")
             +CommonBtn('SUBMIT', 'form', 'submit')
 
