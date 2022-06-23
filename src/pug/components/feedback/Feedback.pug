@@ -20,12 +20,12 @@ mixin Feedback
             .form__wrap
               label.form__label.form__label--name
                 span Full Name
-                input.form__field.form__field--name(type="text" placeholder= "Your Name" autofocus required)
+                input.form__field.form__field--name#nameField(type="text" placeholder= "Your Name" autofocus required)
               label.form__label.form__label--email
                 span Email
-                input.form__field.form__field--email(type="email" placeholder= "Your Email" pattern="[^ @]*@[^ @]*" required)
+                input.form__field.form__field--email#emailField(type="email" placeholder= "Your Email" pattern="[^ @]*@[^ @]*" required)
               label.form__label.form__label--email
                 span Message
-                textarea.form__field.form__field--area(name="", cols="30", rows="3" placeholder= "Your Message")
+                textarea.form__field.form__field--area#descField(name="", cols="30", rows="3" placeholder= "Your Message")
             +CommonBtn('SUBMIT', 'form', 'submit')
 
