@@ -1,20 +1,43 @@
 @import '../../../styles/variables';
 
 .promo {
-  background-image: url('../assets/img/promo.png');
-  background-repeat: no-repeat;
-  background-size: 69rem;
-  background-position: 76% 32%;
 
   &__bg {
+    display: flex;
+
     margin: 0 auto;
     max-width: 136.6rem;
     background: linear-gradient(0deg, $blue-color-light-x7 8.84%, rgba(152, 195, 232, 0) 31.12%);
   }
 
+  &__right {
+    position: relative;
+    left: -29px;
+    top: 8px;
+
+    display: flex;
+    align-items: flex-start;
+    order: 1;
+    width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
   &__content {
+    position: relative;
+    left: 50px;
+
     max-width: 52rem;
-    padding: 8rem 0 19rem;
+    padding: 6rem 0 19rem;
   }
 
   &__title {
@@ -39,9 +62,91 @@
   }
 }
 
+#group1 {
+  animation: group1 5s infinite;
+  animation-direction: alternate;
+}
+
+#group2 {
+  animation: group2 6s infinite;
+  animation-direction: alternate;
+}
+
+#cloud1 {
+  animation: cloud1 6s infinite;
+  animation-delay: 500ms;
+  animation-direction: alternate;
+}
+
+#cloud2 {
+  animation: cloud2 6s infinite;
+  animation-delay: 800ms;
+  animation-direction: alternate;
+}
+
+#cloud3 {
+  animation: cloud3 5s infinite;
+  animation-delay: 500ms;
+  animation-direction: alternate;
+}
+
+#cloud4 {
+  animation: cloud4 6s infinite;
+  animation-delay: 1s;
+  animation-direction: alternate;
+}
+
+#mask1 {
+  animation: shockwaveJump 6s infinite;
+  animation-delay: 1s;
+  animation-direction: alternate;
+}
+
+@keyframes shockwaveJump {
+  100% {
+    transform: scale(1.009);
+  }
+}
+
+@keyframes group1 {
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes group2 {
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes cloud1 {
+  100% {
+    transform: translate(-15px, -15px) scale(1.2);
+  }
+}
+
+@keyframes cloud2 {
+  100% {
+    transform: translate(2px, -10px) scale(1.2);
+  }
+}
+
+@keyframes cloud3 {
+  50% {
+    transform: translate(-10px, -10px) scale(1.02);
+  }
+}
+
+@keyframes cloud4 {
+  50% {
+    transform: translate(-15px, -15px) scale(1.01);
+  }
+}
+
 @media (max-width: 992px) {
   .promo {
-    &__wrap {
+    &__left {
       background-size: 29rem;
       background-position: 100% 62%;
     }
@@ -64,16 +169,37 @@
   }
 }
 
+@media (max-width: 897px) {
+  .promo {
+    &__right {
+      display: none;
+    }
+
+    &__left {
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__text {
+      max-width: unset;
+    }
+
+    &__content {
+      position: static;
+    }
+  }
+}
+
 @media (max-width: 680px) {
   .promo {
-    &__wrap {
+    &__left {
       background-position: 50% 96%;
       background-size: 30rem;
     }
 
     &__content {
       max-width: unset;
-      padding: 2rem 0 28rem;
+      padding: 2rem 0 9rem;
 
       text-align: center;
 
